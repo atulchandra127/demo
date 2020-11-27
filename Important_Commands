@@ -1,0 +1,11 @@
+Important Command:
+##########################
+--------------------------------------------------------------------------------
+* Avoid giving username and password everytime you do git pull and git push:
+# git config credential.helper store
+then run
+#git pull
+#git push
+Once you give user id and password.. Next time it won't ask the password
+:)
+--------------------------------------------------------------------------------
