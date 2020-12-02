@@ -9,3 +9,7 @@ then run
 Once you give user id and password.. Next time it won't ask the password
 :)
 --------------------------------------------------------------------------------
+Gitlab and gitlab runner command:
+sudo docker run --network network1 --hostname gitlab  -itd -p 443:443 -p 80:80  --name gitlab   --restart always   --volume /home/ubuntu/gitlab/config:/etc/gitlab   --volume /home/ubuntu/gitlab/logs:/var/log/gitlab   --volume /home/ubuntu/gitlab/data:/var/opt/gitlab   gitlab/gitlab-ee:latest
+
+docker run -itd --network network1 --name gitlab-runner --restart always -v /home/ubuntu/gitlab-runner/config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest
