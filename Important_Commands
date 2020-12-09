@@ -18,3 +18,7 @@ docker run -itd --network network1 --name gitlab-runner --restart always -v /hom
 Type the following command to delete a user password:
 # sudo -s
 # passwd --delete username
+--------------------------------------------------------------------------------
+To see account aging information such as expiry date and time, enter:
+
+#chage -l userNameHere
