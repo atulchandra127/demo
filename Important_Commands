@@ -22,3 +22,29 @@ Type the following command to delete a user password:
 To see account aging information such as expiry date and time, enter:
 
 #chage -l userNameHere
+
+Change password expiry date
+
+You can set the maximum number of days during which a password is valid. For example, make sure password is valid for 90 days for user named jerry:
+# sudo chage -M 90 jerry
+# sudo chage -l jerry
+
+Try using the following syntax to set the number of days of warning before a password change is required:
+# sudo chage -W WARN_DAYS userName
+# sudo chage -W 30 jerry
+
+--------------------------------------------------------------------------------
+
+While deleting any pods in kubernetes:
+- we must check namespaces once if it is not getting deleted
+
+# kubectl get deployments --all-namespaces
+# kubectl delete deployment <NAME>
+
+Alternatives
+
+# kubectl delete pod NAME --now
+or
+# kubectl delete pod NAME --grace-period=0 --force
+
+--------------------------------------------------------------------------------
